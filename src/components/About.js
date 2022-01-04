@@ -42,7 +42,7 @@ function About() {
           <div className="about__buttons">
             <a
               download={"Adnane-Drissi-CV"}
-              href={require("../assets/pdf/Alexa-Cv.pdf")}
+              href={require("../assets/pdf/cv-adnane.pdf")}
               className={"button button--flex"}
             >
               Download CV<i className="uil uil-download-alt button__icon"></i>
