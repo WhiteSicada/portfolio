@@ -2,18 +2,19 @@ import { Formik } from "formik";
 import React, { useEffect, useState } from "react";
 import { contactArray } from "../data/contactData";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
-import LoadingButton from "@mui/lab/LoadingButton";
+import Button from "@mui/material/Button";
+// import { ToastContainer, toast } from "react-toastify";
+// import LoadingButton from "@mui/lab/LoadingButton";
 
-const options = {
-  position: "top-center",
-  autoClose: 2000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  progress: undefined,
-};
+// const options = {
+//   position: "top-center",
+//   autoClose: 2000,
+//   hideProgressBar: false,
+//   closeOnClick: true,
+//   pauseOnHover: true,
+//   draggable: true,
+//   progress: undefined,
+// };
 function ContactMe() {
   const [loading, setLoading] = useState(false);
   const sendEmail = (values) => {
@@ -29,7 +30,7 @@ function ContactMe() {
       .then(
         (response) => {
           setLoading(false);
-          toast.success(response.text, options);
+          // toast.success(response.text, options);
           console.log("SUCCESS!", response.status, response.text);
         },
         (err) => {
@@ -39,7 +40,7 @@ function ContactMe() {
   };
   return (
     <section className="contact section" id="contactme">
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <h2 className="section__title">Contact Me</h2>
       <span className="section__subtitle">Get in touch</span>
 
@@ -135,7 +136,7 @@ function ContactMe() {
                   rows="7"
                 ></textarea>
               </div>
-              <LoadingButton
+              <Button
                 onClick={() => sendEmail(values)}
                 endIcon={<i className="uil uil-message button__icon"></i>}
                 loading={loading}
@@ -144,13 +145,7 @@ function ContactMe() {
                 className="button button--flex"
               >
                 Send
-              </LoadingButton>
-              {/* <div style={{ textAlign: "center" }}>
-                <button type="submit" className="button button--flex">
-                  Send Message
-                  <i className="uil uil-message button__icon"></i>
-                </button>
-              </div> */}
+              </Button>
             </form>
           )}
         </Formik>

@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-
 function About() {
   return (
     <section className="about section" id="about">

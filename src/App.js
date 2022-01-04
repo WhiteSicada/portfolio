@@ -12,7 +12,7 @@ import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import ScrollUp from "./components/ScrollUp";
 import useLocalStorage from "use-local-storage";
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
